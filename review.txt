@@ -1,0 +1,41 @@
+1.创建二维数组
+vector<vector<int>> v(n,vector<int>(n));
+
+2.用getline接收带空格的字符串
+getline(cin,str)
+
+3.new创建动态内存
+int **a=new int *[n];
+for (int i=0;i<n;i++)
+{
+    a[i]=new int [n];
+}
+//删除操作
+for (int i=0;i<n;i++)
+{
+    delete a[i];
+}
+delete [] a;
+//单行输入
+    vector<int> p;
+    int t = 0;
+    while (cin >> t)
+    {
+        p.push_back(t);
+        if (cin.peek() == '\n')
+        {
+            break;
+     
+        }
+    }
+//多行文本
+    int N;
+    cin >> N;
+    cin.ignore(); // 清除换行符
+    vector<string> lines;
+    for (int i = 0; i < N; i++)
+    {
+        string str;
+        getline(cin, str);
+        lines.push_back(str);
+    }
